@@ -7,7 +7,7 @@ use League\CommonMark\CommonMarkConverter;
 
 class MarkdownField extends Field
 {
-    public function augment(): void
+    protected function augment(): void
     {
         $commonmark = new CommonMarkConverter([]);
 
