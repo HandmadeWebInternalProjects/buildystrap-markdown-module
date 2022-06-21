@@ -1,0 +1,28 @@
+{
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.0",
+    "league/commonmark": "^2.3"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "BuildystrapAddons\\Markdown\\": "src"
+    }
+  },
+  "acorn": {
+    "providers": []
+  },
+  "scripts": {
+    "dev": "composer install",
+    "build": "composer install --no-dev"
+  }
+}
