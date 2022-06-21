@@ -3,8 +3,9 @@
 namespace BuildystrapAddons\Markdown;
 
 use Buildystrap\Builder\Extends\Module;
-use BuildystrapAddons\Fields\Markdown;
 use Illuminate\Support\Collection;
+
+use function collect;
 
 class MarkdownModule extends Module
 {
