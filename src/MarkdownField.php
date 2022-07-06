@@ -7,6 +7,10 @@ use League\CommonMark\CommonMarkConverter;
 
 class MarkdownField extends Field
 {
+    protected static function blueprint(): array
+    {
+    }
+
     protected function augment(): void
     {
         $commonmark = new CommonMarkConverter([]);

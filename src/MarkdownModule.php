@@ -3,17 +3,14 @@
 namespace BuildystrapAddons\Markdown;
 
 use Buildystrap\Builder\Extends\Module;
-use Illuminate\Support\Collection;
-
-use function collect;
 
 class MarkdownModule extends Module
 {
-    protected function blueprint(): Collection
+    protected static function blueprint(): array
     {
-        return collect([
+        return [
             'markdown-field' => MarkdownField::class,
-        ]);
+        ];
     }
 
     protected function augment(): void
