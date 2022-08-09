@@ -11,7 +11,7 @@ class MarkdownField extends Field
     {
     }
 
-    protected function augment(): void
+    public function augment(): void
     {
         $commonmark = new CommonMarkConverter([]);
 

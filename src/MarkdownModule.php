@@ -12,8 +12,4 @@ class MarkdownModule extends Module
             'markdown-field' => MarkdownField::class,
         ];
     }
-
-    protected function augment(): void
-    {
-    }
 }
