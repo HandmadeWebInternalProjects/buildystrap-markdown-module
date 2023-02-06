@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Buildystrap Markdown Module
  * Version: 1.0.0
@@ -22,17 +23,17 @@ defined('ABSPATH') || exit;
 |
 */
 
-if (!file_exists($composer = __DIR__.'/vendor/autoload.php')) {
-    wp_die(__('Error locating autoloader. Please run <code>composer install</code>.'));
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+  wp_die(__('Error locating autoloader. Please run <code>composer install</code>.'));
 }
 
 require $composer;
 
 add_action('buildystrap::builder::boot', function () {
-    Builder::registerField('markdown', MarkdownField::class);
-    Builder::registerModule('markdown', MarkdownModule::class);
-    Builder::registerPath(__DIR__.'/resources/views');
+  Builder::registerField('markdown', MarkdownField::class);
+  Builder::registerModule('markdown', MarkdownModule::class);
+  Builder::registerPath(__DIR__ . '/resources/views');
 
-    // Builder::registerBackendScript('markdown', /* url to script */);
-    // Builder::registerBackendStyle('markdown', /* url to style */);
+  Builder::registerBackendScript('mardown-module', plugin_dir_url(__FILE__) . 'gui/dist/assets/index.js');
+  Builder::registerBackendStyle('mardown-module', plugin_dir_url(__FILE__) . 'gui/dist/assets/index.css');
 });

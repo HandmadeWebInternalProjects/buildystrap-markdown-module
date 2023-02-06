@@ -1,0 +1,23 @@
+{
+  "name": "-buildy-plugin",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kangc/v-md-editor": "^2.3.15",
+    "@vueform/slider": "^2.0.10",
+    "vue": "^3.2.25",
+    "vue3-markdown": "^1.1.7",
+    "vue3-markdown-it": "^1.0.10"
+  },
+  "devDependencies": {
+    "@rollup/plugin-dynamic-import-vars": "^2.0.3",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9",
+    "vite-plugin-externals": "^0.6.2"
+  }
+}
